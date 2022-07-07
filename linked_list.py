@@ -40,6 +40,11 @@ class LinkedList:
         self.Head = new_node
 
     def node_at (self,index):
+        """
+        Returns the node at specific index
+        takes O(n) time
+        """
+        
         current = self.Head
         position = index
 
@@ -96,8 +101,11 @@ class LinkedList:
 
         """
         Removes the first node with the given key
+        
         it takes O(n) time to find the node with key
         and takes O(1) to delete the node
+        Takes overall O(n) time
+
 
         Returns the removed node
         """
@@ -118,6 +126,17 @@ class LinkedList:
         return current
 
     def remove_at(self,index):
+        
+        """
+        Removes the node at specific index
+        
+        takes O(n) time to find the node 
+        and O(1) to delete it
+        Takes overall O(n) time
+
+        Returns the removed node
+        """
+        
         current=self.Head
         prev_node=None
         position = index
@@ -156,37 +175,3 @@ class LinkedList:
         
         return " -> ".join(nodes)
 
-
-
-
-
-
-
-
-
-N1=Node(10)
-
-
-
-l = LinkedList()
-
-print(l.size())
-l.add(4)
-l.add(0)
-l.add(2)
-l.add(0)
-print(l.size())
-# print(l)
-
-l.insert(10,4)
-
-# print(l)
-
-print(l.remove(0))
-
-print(l)
-
-# print(l.node_at(4))
-print(l.remove_at(2))
-
-print(l)
